@@ -84,6 +84,7 @@ class Card
       valid: 'jp-card-valid'
       invalid: 'jp-card-invalid'
     debug: false
+    onCardTypeChange: null
 
   constructor: (opts) ->
     @options = extend(true, @defaults, opts)
@@ -232,6 +233,8 @@ class Card
         QJ.addClass @$card, "jp-card-#{cardType}"
         QJ.toggleClass @$card, 'jp-card-identified', (cardType isnt 'unknown')
         @cardType = cardType
+        if @options.onCardTypeChange
+          @options.onCardTypeChange cardType
     flipCard: ->
       QJ.addClass @$card, 'jp-card-flipped'
     unflipCard: ->
