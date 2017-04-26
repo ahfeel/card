@@ -1,0 +1,17 @@
+@import "card";
+@import "../logos/bcmc";
+
+$fill-color: #3177b3;
+
+.jp-card.jp-card-bcmc {
+    &.jp-card-identified {
+        .jp-card-front, .jp-card-back {
+            &:before {
+                background-color: $fill-color;
+            }
+        }
+        .jp-card-logo.jp-card-bcmc {
+            opacity: 1;
+        }
+    }
+}
