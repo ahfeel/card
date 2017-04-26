@@ -104,7 +104,8 @@ var card =
 	      valid: 'jp-card-valid',
 	      invalid: 'jp-card-invalid'
 	    },
-	    debug: false
+	    debug: false,
+	    onCardTypeChange: null
 	  };
 
 	  function Card(opts) {
@@ -306,7 +307,10 @@ var card =
 	        QJ.removeClass(this.$card, this.cardTypes.join(' '));
 	        QJ.addClass(this.$card, "jp-card-" + cardType);
 	        QJ.toggleClass(this.$card, 'jp-card-identified', cardType !== 'unknown');
-	        return this.cardType = cardType;
+	        this.cardType = cardType;
+	        if (this.options.onCardTypeChange) {
+	          return this.options.onCardTypeChange(cardType);
+	        }
 	      }
 	    },
 	    flipCard: function() {
