@@ -24,6 +24,11 @@ class Card
               '<div class="jp-card-logo jp-card-dinersclub"></div>' +
               '<div class="jp-card-logo jp-card-dankort"><div class="dk"><div class="d"></div><div class="k"></div></div></div>' +
               '<div class="jp-card-logo jp-card-bcmc">Bancontact<div class="mc">Mister Cash</div><div class="x"></div></div>' +
+              '<div class="jp-card-logo jp-card-jcb">' +
+                '<div class="j">J</div>' +
+                '<div class="c">C</div>' +
+                '<div class="b">B</div>' +
+              '</div>' +
               '<div class="jp-card-lower">' +
                   '<div class="jp-card-shiny"></div>' +
                   '<div class="jp-card-cvc jp-card-display">{{cvc}}</div>' +
